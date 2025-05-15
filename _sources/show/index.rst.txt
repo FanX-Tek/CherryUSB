@@ -1,9 +1,11 @@
+.. _performace_show:
+
 性能展示
 ==============================
 
 以下演示了 CherryUSB 在不同应用中的性能表现。主要演示高速模式，全速看不出什么性能差异。
 
-CDC 通信
+CDC ACM 通信
 ----------------
 
 可以达到硬件极限性能，当然需要硬件理论支持到这速度，CherryUSB 就支持到这速度,举例如下：
@@ -14,7 +16,6 @@ CDC 通信
 
 从机测速demo: cdc_acm_template.c 并且关闭 log，脚本使用 `tools/test_srcipts/test_cdc_speed.py`
 主机测速demo: usb_host.c 中 TEST_USBH_CDC_SPEED=1
-
 
 USB Device MSC
 -----------------
@@ -48,6 +49,13 @@ USB Device RNDIS
 .. figure:: img/usbdev_rndis_win.png
 .. figure:: img/usbdev_rndis_linux.png
 
+USB Host HUB
+-----------------------
+
+多级 hub 支持，演示 1托 7 HUB
+
+.. figure:: img/usbhost_hub.png
+.. figure:: img/usbhost_hub2.png
 
 USB Host MSC
 -----------------------
